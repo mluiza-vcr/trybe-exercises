@@ -63,3 +63,27 @@ if (a + b + c == 180){
 else {
   console.log ("false")
 }
+
+//Programa 10
+let peça = "Bispo" .toLowerCase();
+if (peça == "peao"){
+  console.log ("uma casa para frente")
+}
+else if (peça == "torre"){
+  console.log ("vertical ou horizontal")
+}
+else if (peça == "cavalo"){
+  console.log ("movimento em L")
+}
+else if (peça == "bispo"){
+  console.log ("diagonal")
+}
+else if (peça == "rainha"){
+  console.log ("vertical, horizontal e diagonal")
+}
+else if (peça == "rei"){
+  console.log ("uma casa para qualquer direção")
+}
+else {
+  console.log ("peça inválida")
+}
