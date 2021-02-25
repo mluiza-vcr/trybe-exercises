@@ -22,10 +22,21 @@ let modulo = a % b;
 console.log (modulo);
 
 //Programa 6
-
 if (a > b) {
   console.log (a)
 }
 else {
   console.log (b)
+}
+
+//Programa 7
+let c = 8;
+if (a > b && a > c){
+  console.log (a)
+}
+else if (b > a && b > c){
+  console.log (b)
+}
+else if (c > a && c > b){
+  console.log (c)
 }
