@@ -147,4 +147,75 @@ else {
   console.log ("Valores inválidos")
 }
 
+//Programa 15
+
+//Passo 1: descobrir salário-base (desconto inss)
+
+let salarioBruto = 3000;
+
+if (salarioBruto <= 1556.94){
+  var aliquota = 0.08
+}
+else if (salarioBruto >= 1556.95 && salarioBruto <= 2594.92){
+  var aliquota = 0.09
+}
+else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82){
+  var aliquota = 0.11
+}
+else if (salarioBruto > 5189.82){
+  var salarioBaseAlto = salarioBruto - 570.88
+}
+
+let inss = salarioBruto * aliquota
+let salarioBase = salarioBruto - inss
+
+if (salarioBruto < 5189.82){
+  console.log ("O salário base é:" + salarioBase)
+}
+else if (salarioBruto >= 5189.82){
+console.log ("O salário base é:" + salarioBaseAlto)
+}
+// ATÉ AQUI RODOU
+
+//Passo 2: deduzir IR com base no salário-base
+
+if (salarioBase <= 1903.98){
+  var ir = 0
+}
+else if (salarioBase >= 1903.99 && salarioBase <= 2826.65){
+  var ir = 0.075
+}
+else if (salarioBase >= 2826.66 && salarioBase <= 3751.05){
+  var ir = 0.15
+}
+else if (salarioBase >= 3751.06 && salarioBase <= 4664.68){
+  var ir = 0.225
+}
+else if (salarioBase >= 4664.68 && salarioBase < 5189.82) {
+  var ir = 0.275
+}
+else if (salarioBaseAlto >= 5189.82) {
+  var ir = 0.275
+}
+
+
+if (ir == 0){
+  var parcela = 0
+}
+else if (ir == 0.075){
+  var parcela = 142.80
+}
+else if (ir == 0.15){
+  var parcela = 354.80
+}
+else if (ir == 0.225){
+  var parcela = 636.13
+}
+else if (ir == 0275){
+  var parcela = 868.36
+}
+
+let salarioLiquido = (salarioBase - salarioBase * ir) - parcela
+
+console.log ("O salário líquido é:" + salarioLiquido)
 
