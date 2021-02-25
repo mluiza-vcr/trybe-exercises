@@ -40,3 +40,14 @@ else if (b > a && b > c){
 else if (c > a && c > b){
   console.log (c)
 }
+
+//Programa 8
+if (a > 0) {
+  console.log ("positive")
+}
+else if (a < 0) {
+  console.log ("negative")
+}
+else {
+  console.log ("zero")
+}
