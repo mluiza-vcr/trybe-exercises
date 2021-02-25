@@ -66,6 +66,7 @@ else {
 
 //Programa 10
 let peça = "Bispo" .toLowerCase();
+
 if (peça == "peao"){
   console.log ("uma casa para frente")
 }
@@ -86,4 +87,41 @@ else if (peça == "rei"){
 }
 else {
   console.log ("peça inválida")
+}
+
+//Progama 11
+let nota = 56;
+
+if (nota >= 90){
+  console.log ("A")
+}
+else if (nota >= 80){
+  console.log ("B")
+}
+else if (nota >= 70){
+  console.log ("C")
+}
+else if (nota >= 60){
+  console.log ("D")
+}
+else if (nota >= 50){
+  console.log ("E")
+}
+else if (nota < 50){
+  console.log ("F")
+}
+else {
+  console.log ("Nota inválida")
+}
+
+//Programa 12
+let x = 2;
+let y = 3;
+let z = 1;
+
+if (x % 2 == 0 || y % 2 == 0 || z % 2 ==0) {
+  console.log ("true")
+}
+else {
+  console.log ("false")
 }
