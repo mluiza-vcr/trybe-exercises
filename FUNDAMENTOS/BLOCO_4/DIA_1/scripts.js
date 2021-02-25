@@ -133,3 +133,18 @@ if (x % 2 != 0 || y % 2 != 0 || z % 2 != 0) {
 else {
   console.log ("false")
 }
+
+//Programa 14
+let valorCusto = 720;
+let valorVenda = 950;
+let valorCustoTotal = valorCusto + valorCusto * 0.2
+let lucro = valorVenda - valorCustoTotal
+
+if (valorCusto >= 0 && valorVenda >= 0){
+  console.log (lucro * 1000)
+}
+else {
+  console.log ("Valores inválidos")
+}
+
+
