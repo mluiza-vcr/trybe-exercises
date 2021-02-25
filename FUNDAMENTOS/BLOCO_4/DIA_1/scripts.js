@@ -116,10 +116,18 @@ else {
 
 //Programa 12
 let x = 2;
-let y = 3;
+let y = 4;
 let z = 1;
 
-if (x % 2 == 0 || y % 2 == 0 || z % 2 ==0) {
+if (x % 2 == 0 || y % 2 == 0 || z % 2 == 0) {
+  console.log ("true")
+}
+else {
+  console.log ("false")
+}
+
+//Programa 13
+if (x % 2 != 0 || y % 2 != 0 || z % 2 != 0) {
   console.log ("true")
 }
 else {
