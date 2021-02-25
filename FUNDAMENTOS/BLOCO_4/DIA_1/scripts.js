@@ -51,3 +51,15 @@ else if (a < 0) {
 else {
   console.log ("zero")
 }
+
+//Programa 9
+a = 90
+b = 60
+c = 30
+
+if (a + b + c == 180){
+  console.log ("true")
+}
+else {
+  console.log ("false")
+}
