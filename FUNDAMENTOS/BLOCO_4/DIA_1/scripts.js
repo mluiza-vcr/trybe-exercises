@@ -169,14 +169,6 @@ else {
 
 let salarioBase = salarioBruto - aliquota
 
-if (salarioBruto < 5189.82){
-  console.log ("O salário base é:" + salarioBase)
-}
-else if (salarioBruto >= 5189.82){
-console.log ("O salário base é:" + salarioBaseAlto)
-}
-// ATÉ AQUI RODOU
-
 //Passo 2: deduzir IR com base no salário-base
 
 let ir = 0;
@@ -199,8 +191,8 @@ else {
   ir = 0.275 * salarioBase - 868.36
 }
 
-
 let salarioLiquido = salarioBase - ir
 
 console.log ("O salário líquido é:" + salarioLiquido)
 
+.
