@@ -87,5 +87,13 @@ for (index = 0; index < numbers.length; index ++){
 console.log(menor)
 
 //EXERCÍCIO 8
-//Utilizando for , crie uma array que vá de 1 até 25 e imprima o resultado;
+//Utilizando for, crie uma array que vá de 1 até 25 e imprima o resultado;
 
+let listaNova = [];
+
+for (let index = 0; index < 25; index ++){
+  listaNova[index] = index + 1
+  listaNova.push(listaNova[index])
+}
+
+console.log(listaNova)
