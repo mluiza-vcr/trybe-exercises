@@ -44,6 +44,48 @@ else {
 //Utilizando for , descubra qual o maior valor contido no array e imprima-o;
 
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let maior = numbers[0]
+
+for (index = 0; index < numbers.length; index ++){
+  if (numbers[index] > maior) {
+    maior = numbers[index]
+  }
+}
+
+console.log (maior)
 
 //EXERCÍCIO 6 
 //Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
+
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let quantidadeDeValoresImpares = 0
+
+for (index = 0; index < numbers.length; index ++){
+  if (numbers[index] % 2 != 0){
+    quantidadeDeValoresImpares ++
+  }
+}
+
+if (quantidadeDeValoresImpares > 0){
+  console.log (quantidadeDeValoresImpares)
+}
+else {
+  console.log ("nenhum valor ímpar encontrado")
+}
+
+//EXERCÍCIO 7
+//Utilizando for, descubra qual o menor valor contido no array e imprima-o;
+
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let menor = numbers[0]
+
+for (index = 0; index < numbers.length; index ++){
+  if (numbers[index] < menor)
+  menor = numbers[index]
+}
+
+console.log(menor)
+
+//EXERCÍCIO 8
+//Utilizando for , crie uma array que vá de 1 até 25 e imprima o resultado;
+
