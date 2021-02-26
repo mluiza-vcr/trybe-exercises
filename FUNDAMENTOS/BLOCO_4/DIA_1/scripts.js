@@ -151,7 +151,7 @@ else {
 
 //Passo 1: descobrir salário-base (desconto inss)
 
-let salarioBruto = 3000;
+let salarioBruto = 3500;
 let aliquota = 0;
 
 if (salarioBruto <= 1556.94){
@@ -194,5 +194,3 @@ else {
 let salarioLiquido = salarioBase - ir
 
 console.log ("O salário líquido é:" + salarioLiquido)
-
-.
