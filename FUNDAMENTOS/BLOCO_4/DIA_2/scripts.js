@@ -91,11 +91,10 @@ console.log(menor)
 
 let listaNova = [];
 
-for (let index = 0; index < 25; index ++){
+for (let index = 0; index < 24; index ++){
   listaNova[index] = index + 1
-  listaNova.push(listaNova[index])
+  listaNova.push(listaNova[index] + 1)
 }
-
 console.log(listaNova)
 
 //EXERCÍCIO 9
@@ -108,3 +107,5 @@ for (let indice = 0; indice < listaNova.length; indice++){
 }
 
 console.log(resultadoDaDivisao)
+
+//EXERCÍCIO BÔNUS
