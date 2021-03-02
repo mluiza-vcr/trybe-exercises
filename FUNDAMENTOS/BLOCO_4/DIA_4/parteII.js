@@ -102,3 +102,18 @@ somatoria(5)
 //Retorno esperado: true
 //verificaFimPalavra("joaofernando", "fernan") ;
 //Retorno esperado: false
+
+function verifica (word, ending) {
+  for (let i = word.length - 1; i <= 0; i -= 1){
+    for (let j = 0; j < ending.length; j += 1){
+      if (word[i] == ending[j]) {
+        resultado = true
+      } else {
+        resultado = false
+      }
+    }
+  }
+  console.log(resultado)
+}
+
+verifica ("trybe", "be")
