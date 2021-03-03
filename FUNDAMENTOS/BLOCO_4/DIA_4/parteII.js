@@ -70,7 +70,11 @@ console.log (maiorNome)
 }
 
 retornaMaiorNome (["João", "Maria", "Manoela"])
+
+// PEDIR AJUDA AQUI!!!!!!!!!!!!! NÃO CONSEGUI FAZER O 4 E O 5
+=======
 // PEDIR AJUDA AQUI!!!!!!!!!!!!! NÃO CONSEGUI FAZER 4, 5, e 7 
+
 
 // 5. Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
 //Array de teste: [2, 3, 2, 5, 8, 2, 3]; .
@@ -105,6 +109,7 @@ somatoria(5)
 
 function verifica (word, ending) {
   let resultado;
+
   for (let i = word.length - 1; i <= 0; i -= 1){
     for (let j = 0; j < ending.length; j += 1){
       if (word[i] == ending[j]) {
