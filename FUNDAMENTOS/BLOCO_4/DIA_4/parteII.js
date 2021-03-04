@@ -75,9 +75,26 @@ console.log(maiorNome (["João", "Maria", "Manoela"]));
 //Array de teste: [2, 3, 2, 5, 8, 2, 3]; .
 //Valor esperado no retorno da função: 2 .
 
-function numeroQueMaisSeRepete (arrayInteiros) {
-  let 
+function numeroQueMaisSeRepete (numeros) {
+  let numero = 0;
+  let maisRepete = 0;
+  for (let i = 0; i < numeros.length; i += 1) {
+    let repete = 0; 
+    for (let j = i + 1; j < numeros.length; j += 1) {
+      if(numeros[i]===numeros[j]) {
+        numeros.splice(j,1)
+        repete += 1
+      }  
+    }
+    if (repete > maisRepete){
+      maisRepete = repete
+      numero = numeros[i]
+    }
+  }
+  return numero
 }
+
+console.log(numeroQueMaisSeRepete([2, 3, 2, 5, 8, 2, 3]));
 
 // 6. Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
 //Valor de teste: N = 5 .
@@ -103,18 +120,13 @@ console.log(somatoria(5));
 //Retorno esperado: false
 
 function verifica (word, ending) {
-  let resultado;
+  word = word.split("")
+  ending = ending.split("")
 
-  for (let i = word.length - 1; i <= 0; i -= 1){
-    for (let j = 0; j < ending.length; j += 1){
-      if (word[i] == ending[j]) {
-        resultado = true
-      } else {
-        resultado = false
-      }
-    }
-  }
-  console.log(resultado)
 }
 
 verifica ("trybe", "be")
+
+let lista = "melancia"
+
+console.log(lista.split(""))
