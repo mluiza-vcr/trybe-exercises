@@ -119,14 +119,17 @@ console.log(somatoria(5));
 //verificaFimPalavra("joaofernando", "fernan") ;
 //Retorno esperado: false
 
-function verifica (word, ending) {
-  word = word.split("")
-  ending = ending.split("")
-
+function verificaFinal (word, ending) {
+  let i = word.length - ending.length
+  let finalPalavra = '';
+  for (let index = i; index < word.length; index += 1) {
+    finalPalavra = finalPalavra + word[index]
+  }
+  if (finalPalavra === ending) {
+    return true
+  } else {
+    return false
+  }
 }
 
-verifica ("trybe", "be")
-
-let lista = "melancia"
-
-console.log(lista.split(""))
+console.log(verificaFinal("trybe" , "eb"));
