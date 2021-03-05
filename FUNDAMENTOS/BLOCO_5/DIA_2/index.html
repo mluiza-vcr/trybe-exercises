@@ -80,6 +80,49 @@
       centerContent.appendChild(paragraph);
 
       // passo 5
+      let leftContent = document.createElement('div');
+      leftContent.className = "left-content";
+      mainContent.appendChild(leftContent);
+
+      // passo 6
+      let rightContent = document.createElement('div');
+      rightContent.className = "right-content";
+      mainContent.appendChild(rightContent);
+
+      // passo 7
+      leftContent = document.querySelector(".left-content");
+      let smallImage = document.createElement("img");
+      smallImage.className = "small-image";
+      smallImage.src = "https://picsum.photos/200";
+      leftContent.appendChild(smallImage);
+
+      // passo 8
+      rightContent = document.querySelector(".right-content");
+     
+      let listItens = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
+
+      function makeUL(array) {
+        // criar o elemento da lista
+        let list = document.createElement('ul')
+
+        // percorrer o array
+        for (let index = 0; index < array.length; index += 1) {
+
+        // criar o item da lista
+        let item = document.createElement('li')
+
+        // definir conteúdo da lista
+        item.appendChild(document.createTextNode(array[index]))
+
+        // adicionar conteúdo à lista
+        list.appendChild(item);
+        }
+        return list;  
+
+      }
+
+      rightContent.appendChild(makeUL(listItens));
+
 
     </script>
   </body>
