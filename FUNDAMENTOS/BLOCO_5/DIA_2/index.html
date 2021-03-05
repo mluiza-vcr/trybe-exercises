@@ -131,8 +131,44 @@
       mainContent.appendChild(title2);
       mainContent.appendChild(title3);
       mainContent.appendChild(title4);
-      
 
+      // 1
+
+      titulo.className = "title"
+
+      // 2
+
+      title2.className = "description"
+      title3.className = "description"
+      title4.className = "description"
+
+      // 3
+
+      mainContent.removeChild(leftContent)
+
+      // 4
+
+      rightContent = document.querySelector(".right-content")
+
+      rightContent.style.marginRight = "auto";
+
+      // 5
+
+      centerContent = document.querySelector(".center-content");
+      centerContent.parentNode.style.backgroundColor = 'green'
+      
+      // 6
+
+      let ul = document.querySelector("ul");
+      ul.className = "un-list"
+      
+      let item8 = document.querySelectorAll("li")[8]
+      let item9 = document.querySelectorAll("li")[9]
+      
+      ul.removeChild(item8);
+
+      ul.removeChild(item9);
+      
 
     </script>
   </body>
