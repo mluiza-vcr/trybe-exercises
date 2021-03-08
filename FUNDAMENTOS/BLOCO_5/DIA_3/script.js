@@ -59,6 +59,7 @@ function displayHolidays() {
   let getHolidays = document.querySelectorAll('.holiday')
   let backgroundColor = 'rgb(238,238,238)';
   let setNewColor = 'pink';
+  let setBorder = "10px solid purple"
 
   getHolidayButton.addEventListener('click', function() {
     for (let index = 0; index < getHolidays.length; index += 1) {
@@ -100,3 +101,82 @@ function displayFridays(fridaysArray) {
 };
 
 displayFridays([4, 11, 18, 25]);
+
+function dayMouseOver () {
+  let getDays = document.querySelector('#days');
+  
+  getDays.addEventListener('mouseover', function (event) {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+  })
+};
+
+function dayMouseOut() {
+  let getDays = document.querySelector('#days');
+
+  getDays.addEventListener('mouseout', function(event) {
+    event.target.style.fontWeight = '200';
+    event.target.style.fontSize = '20px';
+  })
+};
+
+dayMouseOver();
+dayMouseOut();
+
+function addTask (task) {
+  let createTask = document.createElement('span');
+  createTask.innerHTML = task;
+  let getMyTasks = document.querySelector('.my-tasks');
+  getMyTasks.appendChild(createTask);
+}
+
+addTask ('cozinhar');
+
+function newTaskDiv (color) {
+  let createDiv = document.createElement('div');
+  createDiv.className = 'task';
+  createDiv.style.backgroundColor = color;
+  let getMyTasks = document.querySelector('.my-tasks');
+  getMyTasks.appendChild(createDiv);
+};
+
+newTaskDiv ('pink');
+
+/*function selectTask () {
+  let getTaskDiv = document.querySelector('.task');
+
+  getTaskDiv.addEventListener('click', function () {
+    if (getTaskDiv.className === 'task') {
+      getTaskDiv.className = 'task-selected'
+    } else {
+      getTaskDiv.className = 'task'
+    }
+  })
+};
+
+selectTask(); */
+
+function setTaskClass() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let myTasks = document.querySelector('.task');
+
+  myTasks.addEventListener('click', function(event) {
+    if (selectedTask.length === 0) {
+      event.target.className = 'task selected';
+    } else {
+      event.target.className = 'task';
+    }
+  });
+};
+
+setTaskClass();
+
+function setDayColor () {
+  let days = document.querySelector('#days');
+  let selectedTask = document.querySelector ('.task selected');
+  let taskDiv = document.querySelector('.task');
+
+  days.addEventListener('click', function () {
+    
+  })
+}
