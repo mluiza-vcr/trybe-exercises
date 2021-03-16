@@ -11,10 +11,11 @@
 <body>
   <header>
     <h1>Formulário de currículo</h1>
+    <p>Preencha os dados abaixo</p>
   </header>
 
   <form action="" method="GET">
-    <fieldset id ="dados-pessoais">
+    <fieldset id="dados-pessoais">
       <legend>Dados Pessoais</legend>
 
       <label for="input-name">Nome completo</label>
@@ -43,17 +44,28 @@
       <input type="radio" id="input-type-apt" name="type" required>
     </fieldset>
 
-    <fieldset id ="dados-ultimo-emprego">
+    <fieldset id="dados-ultimo-emprego">
       <legend>Dados do último emprego</legend>
-      
+
       <label for="input-resume">Resumo do Currículo</label>
       <textarea type="text" id="input-resume" maxlength="1000" name="resume" required></textarea>
 
       <label for="input-cargo">Cargo</label>
-      <input type="type" name="cargo" id="input-cargo" required>
-      
+      <input type="type" name="cargo" id="input-cargo" maxlenght="40" required>
 
+      <label for="input-cargo">Descrição do cargo</label>
+      <input type="type" name="cargo" id="input-cargo" maxlenght="500" required>
+    
+      <label for="input-date">Data de início</label>
+      <input type="text" name="startDate" id="input-date" required>
+    
+    
+    
     </fieldset>
+
+
+
+
 
 
 
