@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Formulário de currículo</h1>
+    <p>Preencha os dados abaixo</p>
+  </header>
+
+  <form action="" method="GET">
+    <fieldset id="dados-pessoais">
+      <legend>Dados Pessoais</legend>
+
+      <label for="input-name">Nome completo</label>
+      <input type="text" id="input-name" maxlength="40" name="name" required>
+
+
+      <label for="input-email">E-mail</label>
+      <input type="email" id="input-email" name="email" maxlength="50" required>
+
+      <label for="input-cpf">CPF</label>
+      <input type="text" id="input-cpf" maxlength="11" name="cpf" required>
+
+      <label for="input-adress">Endereço</label>
+      <input type="text" id="input-adress" maxlength="200" name="cpf" required>
+
+      <label for="input-city">Cidade</label>
+      <input type="text" id="input-city" maxlength="28" name="city" required>
+
+      <label for="input-state">Estado</label>
+      <select name="state" id="input-state" required>
+      </select>
+
+      <label for="input-type-house">Casa</label>
+      <input type="radio" id="input-type-house" name="type" required>
+      <label for="input-type-apt">Apartamento</label>
+      <input type="radio" id="input-type-apt" name="type" required>
+    </fieldset>
+
+    <fieldset id="dados-ultimo-emprego">
+      <legend>Dados do último emprego</legend>
+
+      <label for="input-resume">Resumo do Currículo</label>
+      <textarea type="text" id="input-resume" maxlength="1000" name="resume" required></textarea>
+
+      <label for="input-cargo">Cargo</label>
+      <input type="type" name="cargo" id="input-cargo" maxlenght="40" required>
+
+      <label for="input-cargo">Descrição do cargo</label>
+      <input type="type" name="cargo" id="input-cargo" maxlenght="500" required>
+
+      <label for="input-date">Data de início</label>
+      <input type="text" name="startDate" id="input-date" required>
+
+    </fieldset>
+
+    <button type="button" id="submit-btn">Enviar</button>
+    <button type="button" id="clear-btn">Limpar</button>
+
+  </form>
+
+  <section class ="form-data"></section>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
