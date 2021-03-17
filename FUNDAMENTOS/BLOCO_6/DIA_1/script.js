@@ -23,12 +23,43 @@ function validateDate() {
     const year = value[2];
 
     if ((day > 0 && day <= 31) && (month > 0 && month <= 12) && (year > 0)) {
-      console.log("data válida")
+      console.log('data válida')
     } else {
-      alert("Data inválida!")
+      alert('Data inválida!')
     }
   })
 }
 
 validateDate();
+
+function renderCurriculum (event) {
+  event.preventDefault();
+  const formElements = document.querySelectorAll('input');
+  for (let index = 0; index < formElements.length; index += 1) {
+    const userInput = formElements[index].value
+    const dataUser = document.querySelector('.form-data')
+    const div = document.createElement('div')
+    div.className = 'div-curriculum';
+    div.innerHTML = userInput;
+    dataUser.appendChild(div);
+  }
+}
+
+function clearFields () {
+  const formElements = document.querySelectorAll('input');
+  const textArea = document.querySelector('textArea');
+  const div = document.querySelectorAll('.div-curriculum');
+  for (let index = 0; index < formElements.length && index < div.length; index += 1) {
+    const userImput = formElements[index];
+    userImput.value = '';
+    textArea.value = '';
+    div[index].innerText = '';
+  }
+}
+
+const submitButton = document.querySelector('#submit-btn');
+submitButton.addEventListener('click', renderCurriculum);
+
+const clearButton = document.querySelector('#clear-btn');
+clearButton.addEventListener ('click', clearFields);
 
