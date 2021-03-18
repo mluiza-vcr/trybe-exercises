@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="bulma-0.9.1/bulma/css/bulma.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -81,7 +82,7 @@
         <input type="type" name="cargo" id="input-cargo" maxlenght="500" required>
 
         <label for="input-date">Data de início</label>
-        <input type="text" name="startDate" id="input-date" required>
+        <input autocomplete = 'false' type="text" name="startDate" id="input-date" required>
       </fieldset>
 
       <button type="button" id="submit-btn">Enviar</button>
@@ -91,7 +92,9 @@
 
   <section class="form-data"></section>
 
-
+  <script src = "moment.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <script src="./path/to/just-validate.min.js"></script>
   <script src="script.js"></script>
 </body>
 

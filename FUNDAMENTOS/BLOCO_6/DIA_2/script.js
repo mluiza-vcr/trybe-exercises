@@ -30,9 +30,9 @@ function validateDate() {
   })
 }
 
-validateDate();
+//validateDate();
 
-function renderCurriculum (event) {
+function renderCurriculum(event) {
   event.preventDefault();
   const formElements = document.querySelectorAll('input');
   for (let index = 0; index < formElements.length; index += 1) {
@@ -45,7 +45,7 @@ function renderCurriculum (event) {
   }
 }
 
-function clearFields () {
+function clearFields() {
   const formElements = document.querySelectorAll('input');
   const textArea = document.querySelector('textArea');
   const div = document.querySelectorAll('.div-curriculum');
@@ -61,5 +61,9 @@ const submitButton = document.querySelector('#submit-btn');
 submitButton.addEventListener('click', renderCurriculum);
 
 const clearButton = document.querySelector('#clear-btn');
-clearButton.addEventListener ('click', clearFields);
+clearButton.addEventListener('click', clearFields);
 
+var picker = new Pikaday({
+  field: document.getElementById('input-date'),
+  format: 'DD/MM/YYYY'
+});
