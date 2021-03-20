@@ -7,7 +7,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="bulma-0.9.1/bulma/css/bulma.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="justValidateTooltip.css">
 </head>
 
 <body>
@@ -17,29 +17,29 @@
   </header>
 
   <div class="container">
-    <form action="" method="GET">
+    <form action="#" class="js-form form">
+
       <fieldset id="dados-pessoais">
         <legend>Dados Pessoais</legend>
+
         <div class="field">
           <label for="input-name">Nome completo</label>
-
           <div class="control">
-            <input type="text" id="input-name" maxlength="40" name="name" required>
+            <input data-validate-field="name" type="text" id="input-name" maxlength="40" name="name">
           </div>
         </div>
 
         <div class="field">
           <label for="input-email">E-mail</label>
           <div class="control">
-
-            <input type="email" id="input-email" name="email" maxlength="50" required>
+            <input data-validate-field="email" type="email" id="input-email" name="email" maxlength="50" required>
           </div>
         </div>
+
         <div class="field">
           <label for="input-cpf">CPF</label>
-
           <div class="control">
-            <input type="text" id="input-cpf" maxlength="11" name="cpf" required>
+            <input data-validate-field="cpf" type="text" id="input-cpf" maxlength="11" name="cpf" required>
           </div>
         </div>
 
@@ -52,9 +52,7 @@
 
         <div class="field">
           <label for="input-city">Cidade</label>
-
           <div class="control">
-
             <input type="text" id="input-city" maxlength="28" name="city" required>
           </div>
         </div>
@@ -82,19 +80,19 @@
         <input type="type" name="cargo" id="input-cargo" maxlenght="500" required>
 
         <label for="input-date">Data de início</label>
-        <input autocomplete = 'false' type="text" name="startDate" id="input-date" required>
+        <input autocomplete='false' type="text" name="startDate" id="input-date" required>
       </fieldset>
 
       <button type="button" id="submit-btn">Enviar</button>
-      <button type="button" id="clear-btn">Limpar</button>
+      <!-- <button type="button" id="clear-btn">Limpar</button> -->
     </form>
   </div>
 
   <section class="form-data"></section>
 
-  <script src = "moment.js"></script>
+  <script src="moment.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
-  <script src="./path/to/just-validate.min.js"></script>
+  <script src="just-validate.js"></script>
   <script src="script.js"></script>
 </body>
 

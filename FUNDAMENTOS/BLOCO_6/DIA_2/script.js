@@ -1,3 +1,8 @@
+const element = '.js-form';
+
+new window.JustValidate(element);
+
+
 function createStateOptions() {
   const arrayStates = ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Distrito Federal', 'Espírito Santo', 'Goiás',
     'Maranhão', 'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Paraná', 'Pernambuco', 'Piauí', 'Rio de Janeiro',
@@ -57,11 +62,11 @@ function clearFields() {
   }
 }
 
-const submitButton = document.querySelector('#submit-btn');
-submitButton.addEventListener('click', renderCurriculum);
+// const submitButton = document.querySelector('#submit-btn');
+// submitButton.addEventListener('click', renderCurriculum);
 
-const clearButton = document.querySelector('#clear-btn');
-clearButton.addEventListener('click', clearFields);
+// const clearButton = document.querySelector('#clear-btn');
+// clearButton.addEventListener('click', clearFields);
 
 var picker = new Pikaday({
   field: document.getElementById('input-date'),
