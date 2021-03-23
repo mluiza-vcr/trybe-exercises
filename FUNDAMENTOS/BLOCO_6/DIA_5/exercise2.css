@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(229, 212, 247);
+  margin: 15px;
+}
+
+header {
+  font-size: 20px;
+}
+
+header p {
+  font-size: 23px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.aside-one {
+  font-size: 20px;
+}
+
+.aside-one h2 {
+  font-size: 25px;
+}
+
+.main-content {
+  font-size: 23px;
+}
