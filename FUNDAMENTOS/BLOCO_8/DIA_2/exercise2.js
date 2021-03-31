@@ -63,6 +63,8 @@ const books = [
   },
 ];
 
+// Retorne o nome do livro de menor nome.
+
 function smallerName() {
   let nameBook = books[0].name;
   books.forEach(book => {
