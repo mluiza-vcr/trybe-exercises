@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="button">Botão</button>
+  <p id="clicks">Quantidade de cliques: </p>
+  <script>
+
+    let clickCount = 0;
+    const button = document.querySelector('#button');
+    const clicks = document.querySelector('#clicks');
+
+    const count = () => {
+      clickCount += 1
+      clicks.innerHTML = `Quantidade de cliques: ${clickCount}`
+    }
+
+    button.addEventListener('click', count);
+
+  </script>
+</body>
+
+</html>
