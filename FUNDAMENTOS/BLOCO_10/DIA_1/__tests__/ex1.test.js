@@ -1,7 +1,5 @@
-// exercício 1
-
 const { TestScheduler } = require("jest");
-const sum = require('../src/parte1');
+const sum = require('../src/ex1');
 
 describe('teste exercícios da função sum', () => {
   
