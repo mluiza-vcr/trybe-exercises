@@ -6,4 +6,5 @@ test('testa se repositórios estão na lista do resultado', async () => {
   expect.assertions(2);
   expect(response.includes('sd-01-week4-5-project-todo-list')).toBeTruthy();
   expect(response.includes('sd-01-week4-5-project-meme-generator')).toBeTruthy();
-})
+});
+
