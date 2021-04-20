@@ -32,3 +32,4 @@ describe('testa resultados da função getUserName em caso de usuário encontrad
     }
   });
 });
+
