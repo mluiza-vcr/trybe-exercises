@@ -32,21 +32,21 @@ test('test implementation randomNumber', () => {
 
 describe('test functions showString, showFirstLetter and concatStrings', () => {
   test('test function showString', () => {
-     ex1.showString = jest
-        .fn()
-        .mockImplementation((str) => str.toLowerCase());
-     expect(ex1.showString('AMANHÃ')).toBe('amanhã');
+    ex1.showString = jest
+      .fn()
+      .mockImplementation((str) => str.toLowerCase());
+    expect(ex1.showString('AMANHÃ')).toBe('amanhã');
   })
   test('test function showFirstLetter', () => {
-     ex1.showFirstLetter = jest
-        .fn()
-        .mockImplementation((str) => str[str.length - 1]);
-     expect(ex1.showFirstLetter('Lucas')).toBe('s')
+    ex1.showFirstLetter = jest
+      .fn()
+      .mockImplementation((str) => str[str.length - 1]);
+    expect(ex1.showFirstLetter('Lucas')).toBe('s')
   })
   test('test function concatStrings', () => {
-     ex1.showFirstLetter = jest
-        .fn()
-        .mockImplementation((str1, str2, str3) => `${str1}${str2}${str3}`);
-     expect(ex1.showFirstLetter('Car', 'li', 'tos')).toBe('Carlitos')
+    ex1.showFirstLetter = jest
+      .fn()
+      .mockImplementation((str1, str2, str3) => `${str1}${str2}${str3}`);
+    expect(ex1.showFirstLetter('Car', 'li', 'tos')).toBe('Carlitos')
   })
-})
+});
