@@ -2,7 +2,7 @@ const { TestScheduler } = require('jest');
 const math = require('../src/math');
 
 // afterEach(() => {
-//   math.subtrair.mockRestore();
+//  mockRestore();
 // });
 
 test('Faça o mock da função subtrair e teste sua chamada', () => {
