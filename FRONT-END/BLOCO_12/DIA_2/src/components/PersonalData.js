@@ -1,64 +1,35 @@
 import React from 'react';
 
 class PersonalData extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      nome: '',
-      email: '',
-      cpf: '',
-      adress: '',
-      city: '',
-      state: '',
-      moradia: '',
-    }
-  }
-
-  handleChanges = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
-
-  handleClick = (event) => {
-    this.setState({
-      moradia: event.target.value
-    })
-  }
-
-  handleBlur = (event) => {
-    if (event.target.value.startsWith(0 || 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9)) {
-      event.target.value = '';
-    }
-  }
-
   render() {
     const brazilStates = ["AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RO", "RS", "RR", "SC", "SE", "SP", "TO"];
+
+    const { value: { nome, email, cpf, adress, city, state }, onChange, onClick, onBlur } = this.props;
 
     return (
       <fieldset>
         <label> Nome
-          <input type="text" name="nome" maxLength="40" required onChange={this.handleChanges} value={this.state.nome.toUpperCase()} />
+          <input type="text" name="nome" maxLength="40" required onChange={onChange} value={nome.toUpperCase()} />
         </label>
 
         <label> E-mail
-          <input type="email" name="email" maxLength="50" required onChange={this.handleChanges} value={this.state.email} />
+          <input type="email" name="email" maxLength="50" required onChange={onChange} value={email} />
         </label>
 
         <label> CPF
-          <input type="text" name="cpf" maxLength="11" required onChange={this.handleChanges} value={this.state.cpf} />
+          <input type="text" name="cpf" maxLength="11" required onChange={onChange} value={cpf} />
         </label>
 
         <label> Endereço
-          <input type="text" name="adress" maxLength="200" required onChange={this.handleChanges} value={this.state.adress.normalize("NFD").replace(/[^a-zA-Zs]/g, "")} />
+          <input type="text" name="adress" maxLength="200" required onChange={onChange} value={adress.normalize('NFD').replace(/[\u0300-\u036f]/g, "")} />
         </label>
 
         <label> Cidade
-          <input type="text" name="city" maxLength="28" required onChange={this.handleChanges} value={this.state.city} onBlur={this.handleBlur} />
+          <input type="text" name="city" maxLength="28" required onChange={onChange} value={city} onBlur={onBlur} />
         </label>
 
         <label> Estado
-          <select name="state" value={this.state.state} onChange={this.handleChanges}>
+          <select name="state" value={state} onChange={onChange}>
             {brazilStates.map(element => {
               return <option value={element}> {element} </option>
             })};
@@ -66,8 +37,8 @@ class PersonalData extends React.Component {
         </label>
 
         <label>
-          <input type="radio" name="moradia" value="casa" onClick={this.handleClick} /> Casa
-            <input type="radio" name="moradia" value="apartamento" onClick={this.handleClick} /> Apartamento
+          <input type="radio" name="moradia" value="casa" onClick={onClick} /> Casa
+            <input type="radio" name="moradia" value="apartamento" onClick={onClick} /> Apartamento
         </label>
 
       </fieldset>
