@@ -1,0 +1,96 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(229, 212, 247);
+  margin: 15px;
+}
+
+header {
+  font-size: 20px;
+}
+
+header p {
+  font-size: 23px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.aside-one {
+  font-size: 20px;
+}
+
+.aside-one h2 {
+  font-size: 25px;
+}
+
+.main-content {
+  font-size: 23px;
+}
+
+@media screen and (min-width: 800px) {
+
+  body {
+    background-color: rgb(252, 199, 193);
+    margin: 50px;
+  }
+
+  header nav {
+    font-size: 25px;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+  header p{
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .aside-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+  }
+
+  .aside-one {
+    width: 450px;
+    margin: 30px;
+  }
+
+  .aside-one h2 {
+    font-size: 30px;
+    margin: 20px;
+  }
+
+  .aside-two {
+    width: 450px;
+    font-size: 20px;
+    margin: 30px;
+  }
+
+  .aside-two h2 {
+    margin: 20px;
+  }
+
+  .main-content h1 {
+    text-align: center;
+  }
+
+  .main-content {
+    font-size: 25px;;
+  }
+
+  footer {
+    font-size: 20px;
+    padding-top: 50px;
+  }
+
+}
