@@ -10,6 +10,7 @@
         <button id="increment">+</button>
         <button id="decrement">-</button>
         <button id="increment-10">Adiciona 10</button>
+        <input id="increment-number" type="number">Valor a incrementar</input>
       </div>
       <script>
 
@@ -85,6 +86,18 @@
 
             store.dispatch(increment10Action);
           })
+
+          document
+            .querySelector('#increment-number')
+            .addEventListener('keyup', (event) => {
+              const incrementNumber = {
+                type: 'INCREMENT',
+                payload: {
+                  amount: parseInt(event.target.value),
+                }
+              }
+              store.dispatch(incrementNumber);
+            })
 
         // pede os dados e atualiza a página
         store.subscribe(() => {
