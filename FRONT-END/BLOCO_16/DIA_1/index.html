@@ -11,6 +11,7 @@
         <button id="decrement">-</button>
         <button id="increment-10">Adiciona 10</button>
         <input id="increment-number" type="number">Valor a incrementar</input>
+        <input id="decrement-number" type="number">Valor a decrementar</input>
       </div>
       <script>
 
@@ -39,7 +40,7 @@
               // state = state + 1 ❌
               return state + action.payload.amount;
             case 'DECREMENT': 
-              return state - 1;
+              return state - action.payload.amount;
             default:
               return state;
           }
@@ -86,17 +87,35 @@
 
             store.dispatch(increment10Action);
           })
-
+          
           document
             .querySelector('#increment-number')
             .addEventListener('keyup', (event) => {
+              const key = event.keyCode;
               const incrementNumber = {
                 type: 'INCREMENT',
                 payload: {
                   amount: parseInt(event.target.value),
                 }
               }
-              store.dispatch(incrementNumber);
+              if (key === 13) {
+                store.dispatch(incrementNumber);
+              }
+            })
+
+            document
+            .querySelector('#decrement-number')
+            .addEventListener('keyup', (event) => {
+              const key = event.keyCode;
+              const decrementNumber = {
+                type: 'DECREMENT',
+                payload: {
+                  amount: parseInt(event.target.value),
+                }
+              }
+              if (key === 13) {
+                store.dispatch(decrementNumber);
+              }
             })
 
         // pede os dados e atualiza a página
