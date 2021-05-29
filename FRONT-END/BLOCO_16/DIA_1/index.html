@@ -12,6 +12,7 @@
         <button id="increment-10">Adiciona 10</button>
         <input id="increment-number" type="number">Valor a incrementar</input>
         <input id="decrement-number" type="number">Valor a decrementar</input>
+        Clicked button: <span id="value-click">0</span> times
       </div>
       <script>
 
@@ -34,15 +35,28 @@
         // o reducer é uma função que retorna o novo valor do meu estado global
         // a partir de uma action
 
-        function counterReducer(state = 0, action) {
+        const INITIAL_STATE = {
+        numberCount: 0,
+        clickCount: 0,
+      }
+        
+        function counterReducer(state = INITIAL_STATE, action) {
           switch(action.type) {
             case 'INCREMENT': 
-              // state = state + 1 ❌
-              return state + action.payload.amount;
+              return { 
+                numberCount: state.numberCount + action.payload.amount,
+                clickCount: action.click ? state.clickCount + 1 : state.clickCount,
+              }
             case 'DECREMENT': 
-              return state - action.payload.amount;
+            return { 
+                numberCount: state.numberCount - action.payload.amount,
+                clickCount: action.click ? state.clickCount + 1 : state.clickCount,
+              }
             default:
-              return state;
+              return {
+                numberCount: state.numberCount,
+                clickCount: state.clickCount,
+              }
           }
         }
 
@@ -59,7 +73,8 @@
               type: 'INCREMENT',
               payload: {
                 amount: 1,
-              }
+              },
+              click: true,
             }
 
             store.dispatch(incrementAction);
@@ -70,6 +85,10 @@
           .addEventListener('click', () => {
             const decrementAction = {
               type: 'DECREMENT',
+              payload: {
+                amount: 1,
+              },
+              click: true,
             }
 
             store.dispatch(decrementAction);
@@ -82,7 +101,8 @@
               type: 'INCREMENT',
               payload: {
                 amount: 10
-              }
+              },
+              click: true,
             }
 
             store.dispatch(increment10Action);
@@ -96,10 +116,12 @@
                 type: 'INCREMENT',
                 payload: {
                   amount: parseInt(event.target.value),
-                }
+                },
+                click: false,
               }
               if (key === 13) {
                 store.dispatch(incrementNumber);
+                event.target.value = '';
               }
             })
 
@@ -111,16 +133,19 @@
                 type: 'DECREMENT',
                 payload: {
                   amount: parseInt(event.target.value),
-                }
+                },
+                click: false,
               }
               if (key === 13) {
                 store.dispatch(decrementNumber);
+                event.target.value = '';
               }
             })
 
         // pede os dados e atualiza a página
         store.subscribe(() => {
-          document.querySelector('#value').innerHTML = store.getState();
+          document.querySelector('#value').innerHTML = store.getState().numberCount;
+          document.querySelector('#value-click').innerHTML = store.getState().clickCount;
         });
       </script>
    </body>
