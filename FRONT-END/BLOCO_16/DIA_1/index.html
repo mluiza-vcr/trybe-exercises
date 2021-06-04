@@ -38,19 +38,39 @@
         const INITIAL_STATE = {
         numberCount: 0,
         clickCount: 0,
+        addedValues: [],
       }
         
-        function counterReducer(state = INITIAL_STATE, action) {
+      function verifyButton(param) {
+        const btnIncrement = document.querySelector('#increment');
+        const btnDecrement = document.querySelector('#decrement');
+        const btnIncrement10 = document.querySelector('#increment-10');
+        switch (param) {
+          case btnIncrement:
+            return 1;
+          case btnDecrement:
+            return 1;
+          case btnIncrement10:
+            return 1;
+          default:
+            return 0;
+        }
+      }  
+      
+      
+      function counterReducer(state = INITIAL_STATE, action) {
           switch(action.type) {
             case 'INCREMENT': 
               return { 
                 numberCount: state.numberCount + action.payload.amount,
                 clickCount: action.click ? state.clickCount + 1 : state.clickCount,
+                addedValues: verifyButton(action.id)
               }
             case 'DECREMENT': 
             return { 
                 numberCount: state.numberCount - action.payload.amount,
                 clickCount: action.click ? state.clickCount + 1 : state.clickCount,
+                addedValues: verifyButton(action.id)
               }
             default:
               return {
@@ -68,13 +88,14 @@
 
         document
           .querySelector('#increment')
-          .addEventListener('click', () => {
+          .addEventListener('click', (event) => {
             const incrementAction = {
               type: 'INCREMENT',
               payload: {
                 amount: 1,
               },
               click: true,
+              id: event.target.id,
             }
 
             store.dispatch(incrementAction);
@@ -82,13 +103,14 @@
         
         document
           .querySelector('#decrement')
-          .addEventListener('click', () => {
+          .addEventListener('click', (event) => {
             const decrementAction = {
               type: 'DECREMENT',
               payload: {
                 amount: 1,
               },
               click: true,
+              id: event.target.id,
             }
 
             store.dispatch(decrementAction);
@@ -96,13 +118,14 @@
 
         document
           .querySelector('#increment-10')
-          .addEventListener('click', () => {
+          .addEventListener('click', (event) => {
             const increment10Action = {
               type: 'INCREMENT',
               payload: {
                 amount: 10
               },
               click: true,
+              id: event.target.id,
             }
 
             store.dispatch(increment10Action);
@@ -118,6 +141,7 @@
                   amount: parseInt(event.target.value),
                 },
                 click: false,
+                id: event.target.id,
               }
               if (key === 13) {
                 store.dispatch(incrementNumber);
@@ -135,6 +159,7 @@
                   amount: parseInt(event.target.value),
                 },
                 click: false,
+                id: event.target.id,
               }
               if (key === 13) {
                 store.dispatch(decrementNumber);
