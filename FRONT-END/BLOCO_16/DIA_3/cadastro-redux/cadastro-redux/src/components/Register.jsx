@@ -16,9 +16,9 @@ class Register extends React.Component {
   }
 
   handleChange = ({target}) => {
-    this.setState( { 
+    this.setState({
       [target.name]: target.value,
-    } )
+    })
   }
 
   validateRegister = () => {
@@ -40,7 +40,7 @@ class Register extends React.Component {
     return (
       <div>
         <label>Nome
-          <input value={nome} name="nome" onChange={this.handleChange}type="text" />
+          <input value={nome} name="nome" onChange={this.handleChange} type="text" />
         </label>
         <label>Idade
           <input value={idade} name="idade" onChange={this.handleChange} type="text" />

@@ -12,10 +12,10 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/login" component={Login} />
-          <Route path="/registered" component={Registered} />
-          <Route path="/register" component={Register} />
+          <Route exact path="/" component={ Home } />
+          <Route path="/login" component={ Login } />
+          <Route path="/registered" component={ Registered } />
+          <Route path="/register" component={ Register } />
         </Switch>
       </BrowserRouter>
     </Provider>

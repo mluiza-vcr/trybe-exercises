@@ -21,8 +21,8 @@ class Registered extends React.Component {
             return (
               <div key={register.email}>
                 <p>ID de registro: {index + 1}</p>
-                <p>Nome: {register.name}</p>
-                <p>Idade: {register.age}</p>
+                <p>Nome: {register.nome}</p>
+                <p>Idade: {register.idade}</p>
                 <p>Email: {register.email}</p>
               </div>
             );
