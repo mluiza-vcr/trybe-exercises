@@ -1,5 +1,8 @@
-const fs = require('fs').promises;
+const fs = require('fs');
 
-async function writeMyFile(nomeArquivo, conteudoArquivo) {
-
+function writeMyFile(nomeArquivo, conteudoArquivo) {
+  fs.writeFileSync(`/home/malucastelar/trybe-exercises/BACK-END/BLOCO_26/DIA_3/${nomeArquivo}`, conteudoArquivo);
+  return 'ok';
 }
+
+module.exports = writeMyFile;
