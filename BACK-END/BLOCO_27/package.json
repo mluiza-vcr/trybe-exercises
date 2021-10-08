@@ -2,7 +2,11 @@
   "name": "bloco_27",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "api/index.js",
+=======
+  "main": "index.js",
+>>>>>>> 1637a7e38d6716e3cb9b1c95f729827a3d249d18
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ."
